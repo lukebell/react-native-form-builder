@@ -2,5 +2,6 @@
 node_modules/
 coverage/
 .idea/
+example/android/
 # misc
 .DS_Store
