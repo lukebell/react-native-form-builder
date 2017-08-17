@@ -1,7 +1,7 @@
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
- * @flow
+ * @flowx
  */
 
 import React, {Component} from 'react';
@@ -13,7 +13,7 @@ import {
 } from 'react-native';
 import {Card, Col, Grid} from 'react-native-elements';
 import exampleQuestions from './staticData';
-import {MapQuestions} from 'react-native-form-builder';
+import MapQuestions from './questions/MapQuestions';
 
 const styles = StyleSheet.create({
     container: {

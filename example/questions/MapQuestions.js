@@ -41,7 +41,7 @@ const MapQuestions = ({chapter, question, onChange}) => {
                 question={question}
             />}
             {question.type === types.RADIO_TABLE && <RadioTable
-                answer={section[question.name]}
+                section={section}
                 onChange={e => change(e, onChange)}
                 question={question}
             />}

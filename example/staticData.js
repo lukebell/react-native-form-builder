@@ -1,4 +1,4 @@
-import {types} from 'react-native-form-builder';
+import {types} from './constants/constants';
 
 const typesOfHomes = [
     {value: 1, label: 'Casa'},
@@ -17,6 +17,34 @@ const exampleQuestions = [{
     name: 'root',
     validator: null,
     rows: [{
+        id: 44,
+        questions: [
+            {
+                name: 'physicalOrMentalDisabilities',
+                number: 21,
+                type: types.RADIO_TABLE,
+                text: 'Debido a un problema físico, mental o emocional,' +
+                ' ¿tiene dificultad permanente o limitación para...',
+                options: [
+                    {value: 1, text: 'No, ninguna dificultad'},
+                    {value: 2, text: 'Sí, alguna dificultad'},
+                    {value: 3, text: 'Sí, mucha dificultad'},
+                    {value: 4, text: 'No puede hacerlo'}
+                ],
+                questions: [
+                    {name: 'See', text: 'para ver, aún cuando usa anteojos?'},
+                    {name: 'Listen', text: 'para oír, aún cuando usa audífonos?'},
+                    {name: 'Walk', text: 'para caminar o subir escaleras?'},
+                    {name: 'focus', text: 'para recordar o concentrarse?'},
+                    {name: 'batheOrDressItself', text: 'con el cuidado personal, como bañarse o vestirse?'},
+                    {
+                        name: 'comunicate',
+                        text: 'para comunicarse, por ejemplo entender o ser entendido por otros?'
+                    }
+                ]
+            }
+        ]
+    }, {
         id: 1,
         questions: [
             {
@@ -103,29 +131,6 @@ const exampleQuestions = [{
                 type: types.SELECT
             }
         ]
-    }, {
-        id: 7,
-        questions: [{
-            name: 'radioTable',
-            number: 13,
-            type: types.RADIO_TABLE,
-            text: 'Debido a un problema físico, mental o emocional,' +
-            ' ¿tiene dificultad permanente o limitación para...',
-            responses: [
-                {value: 1, text: 'No, ninguna dificultad'},
-                {value: 2, text: 'Sí, alguna dificultad'},
-                {value: 3, text: 'Sí, mucha dificultad'},
-                {value: 4, text: 'No puede hacerlo'}
-            ],
-            question: [
-                {name: 'See', text: 'para ver, aún cuando usa anteojos?'},
-                {name: 'Listen', text: 'para oír, aún cuando usa audífonos?'},
-                {name: 'Walk', text: 'para caminar o subir escaleras?'},
-                {name: 'focus', text: 'para recordar o concentrarse?'},
-                {name: 'batheOrDressItself', text: 'con el cuidado personal, como bañarse o vestirse?'},
-                {name: 'comunicate', text: 'para comunicarse, por ejemplo entender o ser entendido por otros?'}
-            ]
-        }]
     }, {
         id: 8,
         questions: [
