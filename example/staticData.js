@@ -17,6 +17,21 @@ const exampleQuestions = [{
     name: 'root',
     validator: null,
     rows: [{
+        id: 9,
+        questions: [
+            {
+                col: 100,
+                number: 15,
+                name: 'yearArrivedToArgentina',
+                text: '¿En qué año llegó a la Argentina?',
+                inputText: 'Año',
+                inputUnit: null,
+                ignoreText: 'Ignorado',
+                ignoreValue: 9,
+                type: types.TEXT_WITH_IGNORE
+            }
+        ]
+    }, {
         id: 44,
         questions: [
             {

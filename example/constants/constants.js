@@ -22,6 +22,7 @@ export const types = {
     SUM: 'sum',
     TEXT: 'text',
     TEXT_AREA: 'textarea',
+    TEXT_WITH_IGNORE: 'textWithIgnore',
     TITLE: 'title',
     YEAR: 'Year',
     YES_NO: 'YesNoQuestion'
