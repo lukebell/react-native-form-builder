@@ -26,9 +26,10 @@ const exampleQuestions = [{
                 text: '¿En qué año llegó a la Argentina?',
                 inputText: 'Año',
                 inputUnit: null,
+                maxLength: 4,
                 ignoreText: 'Ignorado',
                 ignoreValue: 9,
-                type: types.TEXT_WITH_IGNORE
+                type: types.NUMBER_WITH_IGNORE
             }
         ]
     }, {

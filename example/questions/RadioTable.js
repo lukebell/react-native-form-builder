@@ -7,7 +7,7 @@ import {CheckBox} from 'react-native-elements';
 
 const styles = StyleSheet.create({
     rowContainer: {
-        paddingHorizontal: 4,
+        paddingHorizontal: 4
     }
 });
 
@@ -35,7 +35,6 @@ const renderQuestionRow = (section, options, parentQuestionName, questionRow, on
 };
 
 const RadioTable = ({section, question, onChange}) => {
-    console.log(question);
     return (
         <View style={styles.rowContainer}>
             <Text>{question.number ? `${question.number}` : ''}</Text>

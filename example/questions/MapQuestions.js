@@ -12,6 +12,7 @@ import Title from './Title';
 import YesNoQuestion from './YesNoQuestion';
 import {types} from '../constants/constants';
 import InputTextWithIgnore from "./InputTextWithIgnore";
+import InputNumberWithIgnore from "./InputNumberWithIgnore";
 
 const change = (event, callback) => callback(event);
 
@@ -67,6 +68,11 @@ const MapQuestions = ({chapter, question, onChange}) => {
                 question={question}
             />}
             {question.type === types.TEXT_WITH_IGNORE && <InputTextWithIgnore
+                answer={section[question.name]}
+                onChange={e => change(e, onChange)}
+                question={question}
+            />}
+            {question.type === types.NUMBER_WITH_IGNORE && <InputNumberWithIgnore
                 answer={section[question.name]}
                 onChange={e => change(e, onChange)}
                 question={question}
