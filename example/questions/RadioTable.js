@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import {StyleSheet, Text, View} from 'react-native';
 import {Row, Col, Grid} from 'react-native-elements';
 import {CheckBox} from 'react-native-elements';
+import QuestionText from './QuestionText';
 
 const styles = StyleSheet.create({
     rowContainer: {
@@ -37,8 +38,7 @@ const renderQuestionRow = (section, options, parentQuestionName, questionRow, on
 const RadioTable = ({section, question, onChange}) => {
     return (
         <View style={styles.rowContainer}>
-            <Text>{question.number ? `${question.number}` : ''}</Text>
-            <Text>{question.text}</Text>
+            <QuestionText question={question}/>
             <Grid>
                 <Row>
                     <Col/>

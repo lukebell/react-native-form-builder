@@ -17,6 +17,50 @@ const exampleQuestions = [{
     name: 'root',
     validator: null,
     rows: [{
+        id: 4222,
+        questions: [
+            {
+                col: 100,
+                name: 'kindOfHome',
+                type: types.RADIO,
+                text: 'Tipo de vivienda particular',
+                infoAfterText: 'Este es un info after text',
+                number: 1,
+                options: [
+                    {value: 1, label: 'Casa'},
+                    {value: 2, label: 'Rancho'},
+                    {value: 3, label: 'Casilla'},
+                    {value: 4, label: 'Departamento'},
+                    {value: 5, label: 'Pieza en inquilinato'},
+                    {value: 6, label: 'Pieza en hotel familiar o pensión'},
+                    {value: 7, label: 'Local no construido para habitación'},
+                    {value: 8, label: 'Vievienda móvil'},
+                    {value: 9, label: 'Persona/s viviendo en la calle'}
+                ]
+            }]
+    }, {
+        id: 1239,
+        questions: [
+            {
+                name: 'dwellingState',
+                number: 2,
+                type: types.RADIO_SECTIONS,
+                text: 'La vivienda está...',
+                isRequired: true,
+                options: [
+                    {section: 'habitada...'},
+                    {value: 1, label: 'con personas presentes'},
+                    {value: 2, label: 'con todas las personas temporalmente ausentes'},
+                    {section: 'deshabitada...'},
+                    {value: 3, label: 'en alquiler o venta'},
+                    {value: 4, label: 'en construcción'},
+                    {value: 5, label: 'se usa como comercio, oficina o consultorio'},
+                    {value: 6, label: 'se usa para vacaciones, fin de semana u otro uso temporal'},
+                    {value: 7, label: 'por otra razón'}
+                ]
+            }
+        ]
+    }, {
         id: 9,
         questions: [
             {
@@ -96,27 +140,6 @@ const exampleQuestions = [{
                 type: types.LABEL
             }
         ]
-    }, {
-        id: 4,
-        questions: [
-            {
-                col: 100,
-                name: 'kindOfHome',
-                type: types.RADIO,
-                text: 'Tipo de vivienda particular',
-                number: 1,
-                options: [
-                    {value: 1, label: 'Casa'},
-                    {value: 2, label: 'Rancho'},
-                    {value: 3, label: 'Casilla'},
-                    {value: 4, label: 'Departamento'},
-                    {value: 5, label: 'Pieza en inquilinato'},
-                    {value: 6, label: 'Pieza en hotel familiar o pensión'},
-                    {value: 7, label: 'Local no construido para habitación'},
-                    {value: 8, label: 'Vievienda móvil'},
-                    {value: 9, label: 'Persona/s viviendo en la calle'}
-                ]
-            }]
     }, {
         id: 5,
         questions: [

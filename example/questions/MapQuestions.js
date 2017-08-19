@@ -7,6 +7,7 @@ import InputNumber from './InputNumber';
 import InputText from './InputText';
 import Select from './Select';
 import Radio from './Radio';
+import RadioSections from './RadioSections';
 import RadioTable from './RadioTable';
 import Title from './Title';
 import YesNoQuestion from './YesNoQuestion';
@@ -38,6 +39,11 @@ const MapQuestions = ({chapter, question, onChange}) => {
                 question={question}
             />}
             {question.type === types.RADIO && <Radio
+                answer={section[question.name]}
+                onChange={e => change(e, onChange)}
+                question={question}
+            />}
+            {question.type === types.RADIO_SECTIONS && <RadioSections
                 answer={section[question.name]}
                 onChange={e => change(e, onChange)}
                 question={question}
