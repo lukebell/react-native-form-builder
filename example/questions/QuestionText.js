@@ -7,7 +7,9 @@ const styles = StyleSheet.create({
     questionHeader: {
         flex: 1,
         flexDirection: 'row',
-        alignItems: 'center'
+        alignItems: 'center',
+        marginTop: 8,
+        marginBottom: 10
     },
     questionText: {
         marginLeft: 5

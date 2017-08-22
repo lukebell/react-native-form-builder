@@ -18,12 +18,13 @@ const renderQuestionRow = (section, options, parentQuestionName, questionRow, on
     const change = (value, callback) => callback({target: {name: questionName, value}});
     return (
         <Row>
-            <Col>
-                <Text>{questionRow.text}</Text>
+            <Col size={4}>
+                <Text style={{paddingTop: 15}}>{questionRow.text}</Text>
             </Col>
             {options.map(option => (
                 <Col><CheckBox
                     key={option.value}
+                    containerStyle={{borderWidth: 0, backgroundColor: null}}
                     checkedIcon='dot-circle-o'
                     onPress={() => change(option.value, onChange)}
                     uncheckedIcon='circle-o'
@@ -41,10 +42,12 @@ const RadioTable = ({section, question, onChange}) => {
             <QuestionText question={question}/>
             <Grid>
                 <Row>
-                    <Col/>
+                    <Col size={4}/>
                     {question.options.map(option => (
                         <Col>
-                            <Text>{option.text}</Text>
+                            <Text>
+                                {option.text}
+                            </Text>
                         </Col>
                     ))}
                 </Row>

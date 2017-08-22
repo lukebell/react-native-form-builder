@@ -9,6 +9,10 @@ const styles = StyleSheet.create({
     rowContainer: {
         flex: 1,
         paddingHorizontal: 4
+    },
+    sectionSubTitle: {
+        fontWeight: 'bold',
+        padding: 10
     }
 });
 
@@ -19,7 +23,7 @@ const RadioSections = ({answer, question, onChange}) => {
             <QuestionText question={question}/>
             {question.options.map(option => (<View>
                     {option.section
-                        ? <Text>{option.section}</Text>
+                        ? <Text style={styles.sectionSubTitle}>{option.section}</Text>
                         : <CheckBox
                             key={option.value}
                             title={option.label}
