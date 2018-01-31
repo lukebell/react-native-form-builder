@@ -23,6 +23,8 @@ import YesNoQuestion from './YesNoQuestion';
 import Total from './Total';
 import AddOnList from './AddOnList';
 import LapelGroup from './LapelGroup';
+import Form from './Form';
+import FormGroup from './FormGroup';
 
 const getQuestionComponent = questionType => {
     switch (questionType) {
@@ -64,6 +66,10 @@ const getQuestionComponent = questionType => {
             return AddOnList;
         case types.LAPEL_GROUP:
             return LapelGroup;
+        case types.FORM:
+            return Form;
+        case types.FORM_GROUP:
+            return FormGroup;
         default:
             throw Error(`Question type not implemented: ${questionType}`);
     }
@@ -77,7 +83,8 @@ const isText = questionType =>
 
 const isSectionQuestion = questionType =>
     questionType === types.RADIO_TABLE
-    || questionType === types.SUM;
+    || questionType === types.SUM
+    || questionType === types.FORM_GROUP;
 
 /**
  * Set new answer inside a chapter copy.

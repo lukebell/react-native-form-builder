@@ -32,7 +32,9 @@ export const types = {
     TITLE: 'title',
     YEAR: 'Year',
     YES_NO: 'YesNoQuestion',
-    LAPEL_GROUP: 'lapelGroup'
+    LAPEL_GROUP: 'lapelGroup',
+    FORM: 'form',
+    FORM_GROUP: 'formGroup'
 };
 
 // operator enum will be moved to another package in a future.
