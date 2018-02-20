@@ -15,7 +15,6 @@ class FormGroup extends Component {
             name: PropTypes.string.isRequired,
             tabsAmount: PropTypes.string,
             tabsRef: PropTypes.arrayOf(PropTypes.shape({})),
-            form: PropTypes.shape({}).isRequired,
             tabTemplate: PropTypes.string.isRequired
         }).isRequired,
         onChange: PropTypes.func.isRequired,
