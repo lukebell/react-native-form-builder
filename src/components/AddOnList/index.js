@@ -114,7 +114,7 @@ export default class AddOnList extends Component {
                 <View style={computedStyles.tableContainer}>
                     {this.state.answer && this.state.answer.map((answerRow, index) => (
                         <TouchableOpacity
-                            key={answerRow.toString()}
+                            key={'answerRow-' + index}
                             onPress={() => this.deleteRow(index)}
                         >
                             <Row
@@ -123,10 +123,10 @@ export default class AddOnList extends Component {
                                     index % 2 === 0 ? computedStyles.evenRow : {}
                                 ]}
                             >
-                                {question.childQuestions.map(childQuestion => {
+                                {question.childQuestions.map((childQuestion, index) => {
                                     const value = getFieldValue(answerRow, childQuestion);
                                     return (
-                                        <Col key={value}>
+                                        <Col key={'childrenQuestion-' + index}>
                                             <Text style={computedStyles.childrenQuestionsText}>
                                                 {answerRow[childQuestion.name] ? value : '-'}
                                             </Text>
