@@ -11,10 +11,12 @@ import {types} from '../../enums';
 import styles from './styles';
 
 const getFieldValue = (answerRow, {name, options, type}) => {
-    const value = toNumber(answerRow[name]);
-    return (
-        type === types.SELECT ? find(options, option => option.value === value).label : answerRow[name]
-    );
+    const value = answerRow[name];
+    if (type !== types.SELECT)
+        return value;
+
+    const selectedOption = find(options, {'value': value}) || {};
+    return selectedOption.label;
 };
 
 export default class AddOnList extends Component {
